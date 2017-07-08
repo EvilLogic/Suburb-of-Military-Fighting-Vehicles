@@ -36,19 +36,20 @@ namespace Suburb_of_Military_Fighting_Vehicles_Online
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTanks));
             this.Timer1 = new System.Windows.Forms.Timer(this.components);
             this.pctObstacle = new System.Windows.Forms.PictureBox();
             this.pctTankTwo = new System.Windows.Forms.PictureBox();
             this.pctTank1 = new System.Windows.Forms.PictureBox();
             this.MenuStrip2 = new System.Windows.Forms.MenuStrip();
             this.gameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.onlineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.startServerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.connectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cheatsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblScore1 = new System.Windows.Forms.Label();
             this.lblScore2 = new System.Windows.Forms.Label();
-            this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pctObstacle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctTankTwo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctTank1)).BeginInit();
@@ -111,6 +112,13 @@ namespace Suburb_of_Military_Fighting_Vehicles_Online
             this.gameToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.gameToolStripMenuItem.Text = "Game";
             // 
+            // newGameToolStripMenuItem
+            // 
+            this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
+            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.newGameToolStripMenuItem.Text = "New Game";
+            this.newGameToolStripMenuItem.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click);
+            // 
             // onlineToolStripMenuItem
             // 
             this.onlineToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -123,14 +131,14 @@ namespace Suburb_of_Military_Fighting_Vehicles_Online
             // startServerToolStripMenuItem
             // 
             this.startServerToolStripMenuItem.Name = "startServerToolStripMenuItem";
-            this.startServerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.startServerToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.startServerToolStripMenuItem.Text = "Start Server";
             this.startServerToolStripMenuItem.Click += new System.EventHandler(this.startServerToolStripMenuItem_Click);
             // 
             // connectToolStripMenuItem
             // 
             this.connectToolStripMenuItem.Name = "connectToolStripMenuItem";
-            this.connectToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.connectToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.connectToolStripMenuItem.Text = "Connect";
             this.connectToolStripMenuItem.Click += new System.EventHandler(this.connectToolStripMenuItem_Click);
             // 
@@ -160,13 +168,6 @@ namespace Suburb_of_Military_Fighting_Vehicles_Online
             this.lblScore2.TabIndex = 8;
             this.lblScore2.Text = "Score";
             // 
-            // newGameToolStripMenuItem
-            // 
-            this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
-            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.newGameToolStripMenuItem.Text = "New Game";
-            this.newGameToolStripMenuItem.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click);
-            // 
             // frmTanks
             // 
             this.ClientSize = new System.Drawing.Size(1284, 642);
@@ -176,6 +177,7 @@ namespace Suburb_of_Military_Fighting_Vehicles_Online
             this.Controls.Add(this.pctTank1);
             this.Controls.Add(this.pctObstacle);
             this.Controls.Add(this.MenuStrip2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.MenuStrip2;
             this.Name = "frmTanks";
             this.Text = "Tanks";
